@@ -47,7 +47,6 @@
         // set global content in vuex
         this.$store.commit('global/setGlobals', globalRes.data.story.content)
 
-        console.log(globalRes.data.story.content)
         // set loaded to true to negate uneccesary additional calls to storyblok
         this.$store.commit('global/isLoaded', true)
       }
