@@ -1,11 +1,14 @@
+const axios = require('axios')
+const isPreview = process.env.NODE_ENV === 'development'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   dev: process.env.NODE_ENV !== 'production',
 
   env: {
-    STORYBLOK_API_KEY: process.env.STORYBLOK_API_KEY,
     STORYBLOK_PREVIEW_API_KEY: process.env.STORYBLOK_PREVIEW_API_KEY,
+    STORYBLOK_API_KEY: process.env.STORYBLOK_API_KEY,
     NODE_ENV: process.env.NODE_ENV,
   },
 
@@ -16,7 +19,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'flywheel',
+    title: 'Old Town Recovery',
     htmlAttrs: {
       lang: 'en',
     },
@@ -109,7 +112,7 @@ export default {
     [
       'storyblok-nuxt',
       {
-        accessToken: process.env.STORYBLOK_API_KEY,
+        accessToken: process.env.STORYBLOK_PREVIEW_API_KEY,
         cacheProvider: 'memory',
       },
     ],

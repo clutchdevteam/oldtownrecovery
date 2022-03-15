@@ -1,18 +1,16 @@
 <template>
   <div>
-    {{ block.text }}
+    {{ block.label }}
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    block: {
-      type: Object,
-      required: true,
+  export default {
+    props: {
+      block: {
+        type: Object,
+        required: true,
+      },
     },
-  },
-};
+  }
 </script>
-
-<style lang="scss" scoped></style>
