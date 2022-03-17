@@ -39,9 +39,7 @@
           <Portal to="mobile-menu">
             <div
               :class="`fixed inset-0 bg-black transition duration-150 ${
-                isMobileMenuOpen
-                  ? 'bg-opacity-75'
-                  : 'bg-opacity-0 pointer-events-none'
+                isMobileMenuOpen ? 'bg-opacity-75' : 'bg-opacity-0 pointer-events-none'
               }`"
               :inert="!isMobileMenuOpen"
               @keydown.esc="closeMenu"
@@ -76,9 +74,7 @@
                   </button>
                 </div>
 
-                <div
-                  class="flex flex-col justify-between h-screen w-full bg-white"
-                >
+                <div class="flex flex-col justify-between h-screen w-full bg-white">
                   <nav role="navigation">
                     <ul>
                       <li
@@ -93,11 +89,7 @@
 
                   <div class="px-3 py-6">
                     <BaseLink href="/">
-                      <BaseImage
-                        v-if="logo"
-                        :src="logo.filename"
-                        :alt="logo.alt"
-                      />
+                      <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
                     </BaseLink>
                   </div>
                 </div>
@@ -111,44 +103,41 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import { Portal } from "portal-vue";
+  import { mapState } from 'vuex'
+  import { Portal } from 'portal-vue'
 
-export default {
-  components: {
-    Portal,
-  },
-  props: {
-    nav: {
-      type: Array,
-      required: true,
+  export default {
+    components: {
+      Portal,
     },
-    logo: {
-      type: Object,
-      required: true,
+    props: {
+      nav: {
+        type: Array,
+        required: true,
+      },
+      logo: {
+        type: Object,
+        required: true,
+      },
     },
-  },
-  computed: {
-    ...mapState("global", ["isMobileMenuOpen", "pageHasModalOpen"]),
-  },
-  methods: {
-    async toggleMobileMenu() {
-      await this.$store.commit(
-        "global/isMobileMenuOpen",
-        !this.isMobileMenuOpen
-      );
-      await this.$nextTick();
-      await this.$nextTick();
+    computed: {
+      ...mapState('global', ['isMobileMenuOpen', 'pageHasModalOpen']),
+    },
+    methods: {
+      async toggleMobileMenu() {
+        await this.$store.commit('global/isMobileMenuOpen', !this.isMobileMenuOpen)
+        await this.$nextTick()
+        await this.$nextTick()
 
-      this.$refs.closeButtonRef?.focus();
-    },
-    async closeMenu() {
-      await this.$store.commit("global/isMobileMenuOpen", false);
-      await this.$nextTick();
-      await this.$nextTick();
+        this.$refs.closeButtonRef?.focus()
+      },
+      async closeMenu() {
+        await this.$store.commit('global/isMobileMenuOpen', false)
+        await this.$nextTick()
+        await this.$nextTick()
 
-      this.$refs.openButtonRef?.focus();
+        this.$refs.openButtonRef?.focus()
+      },
     },
-  },
-};
+  }
 </script>

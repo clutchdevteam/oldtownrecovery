@@ -6,11 +6,14 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        display: ['EB Garamond', 'Hind'],
+        display: ['EB Garamond', 'serif'],
+        body: ['Hind', 'sans-serif'],
       },
       colors: {
-        primaryLight: '#138D7B',
-        primaryDark: '#40504F',
+        primary: {
+          light: '#138D7B',
+          dark: '#40504F',
+        },
         secondary: '#23CEA0',
         accent: '#EF6B3',
         black: '#1D1D1D',
