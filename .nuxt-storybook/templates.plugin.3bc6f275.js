@@ -29,7 +29,7 @@ const Client = {
   install () {
     if (!Vue.prototype.$storyapi) {
       Vue.prototype.$storyapi = new StoryblokClient({
-        accessToken: 'xrz7XXZIr9rBdqqmFR4ApQtt',
+        accessToken: 'dfBXOdeWbGtIoMVUtbrmHwtt',
         cache: {
           clear: 'auto',
           type: 'memory'
