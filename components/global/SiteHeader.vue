@@ -1,6 +1,6 @@
 <template>
   <header class="flex items-center justify-between height-limit">
-    <div class="w-28 bg-primary-light rounded-br-md p-3">
+    <div class="bg-primary-light rounded-br-md p-3">
       <BaseLink href="/" :inert="isMobileMenuOpen">
         <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
       </BaseLink>
@@ -133,7 +133,7 @@
     @apply p-6;
   }
 
-  .nuxt-link-extact-active {
-    @apply border-accent opacity-100 text-primary-light font-semibold;
+  .nuxt-link-exatact-active {
+    @apply border-accent opacity-100 text-primary-light;
   }
 </style>
