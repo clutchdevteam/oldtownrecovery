@@ -8,9 +8,6 @@
   "Page": {
     "description": "Auto imported from components/Page.vue"
   },
-  "BlocksTest": {
-    "description": "Auto imported from components/blocks/Test.vue"
-  },
   "BaseButton": {
     "description": "Auto imported from components/base/BaseButton.vue"
   },
@@ -58,6 +55,12 @@
   },
   "BaseTextarea": {
     "description": "Auto imported from components/base/BaseTextarea.vue"
+  },
+  "BlocksHighlightCta": {
+    "description": "Auto imported from components/blocks/HighlightCta.vue"
+  },
+  "BlocksTest": {
+    "description": "Auto imported from components/blocks/Test.vue"
   },
   "BaseRichText": {
     "description": "Auto imported from components/base/BaseRichText/BaseRichText.vue"
