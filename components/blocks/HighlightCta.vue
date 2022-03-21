@@ -8,7 +8,7 @@
       <BaseHeading size="h3" tag="h2">{{ block.text }}</BaseHeading>
 
       <BaseButton
-        v-if="block.button"
+        v-if="block.button.length"
         class="absolute bottom-0 -mb-4"
         :href="block.button[0].link.cached_url"
       >
