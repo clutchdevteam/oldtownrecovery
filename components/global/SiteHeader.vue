@@ -133,7 +133,7 @@
     @apply p-6;
   }
 
-  .nuxt-link-exatact-active {
+  .nuxt-link-exact-active {
     @apply border-accent opacity-100 text-primary-light;
   }
 </style>
