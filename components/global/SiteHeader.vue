@@ -1,5 +1,5 @@
 <template>
-  <header class="container mx-auto flex items-center justify-between height-limit">
+  <header class="flex items-center justify-between height-limit">
     <div class="w-28 bg-primary-light rounded-br-md p-3">
       <BaseLink href="/" :inert="isMobileMenuOpen">
         <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
@@ -13,7 +13,7 @@
         <li
           v-for="menu in nav"
           :key="menu.id"
-          class="text-black opacity-75 flex justify-center content-center w-28 border-t-2 hover:text-primary-light hover:opacity-100 hover:font-semibold hover:border-accent hover:border-t-2 text-sm"
+          class="text-black font-semibold opacity-75 flex justify-center content-center border-t-2 border-transparent hover:opacity-100 hover:border-accent text-sm"
         >
           <BaseMenu :menu="menu" :depth="0" />
         </li>
@@ -135,9 +135,5 @@
 
   .nuxt-link-extact-active {
     @apply border-accent opacity-100 text-primary-light font-semibold;
-  }
-
-  .height-limit {
-    max-height: 69px;
   }
 </style>
