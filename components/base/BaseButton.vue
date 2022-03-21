@@ -28,7 +28,7 @@
 
 <style lang="postcss" scoped>
   .btn {
-    @apply px-5 py-1 rounded transition duration-150 ease-in-out border-2 border-transparent;
+    @apply px-5 py-1 font-display rounded transition duration-150 ease-in-out border-2 border-transparent;
 
     &.btn-primary {
       @apply bg-accent text-white;
@@ -40,6 +40,12 @@
 
     &:hover {
       @apply scale-105;
+    }
+  }
+
+  @screen lg {
+    .btn {
+      @apply text-lg;
     }
   }
 </style>
