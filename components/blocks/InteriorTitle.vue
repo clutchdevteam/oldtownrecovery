@@ -1,13 +1,8 @@
 <template>
-  <section class="relative bg-primary-dark flex justify-center py-16 overflow-hidden">
-    <img
-      class="absolute z-10 inset-0 opacity-10 object-center top-[-100%]"
-      src="/interiorTitle-bg.png"
-      alt=""
-    />
-    <div class="flex flex-col items-center">
-      <p class="text-white" v-if="block.kicker">{{ block.kicker }}</p>
-      <BaseHeading size="h1" class="text-white z-20">{{ block.title }}</BaseHeading>
+  <section class="relative flex justify-center py-12 overflow-hidden">
+    <div class="flex flex-col items-center z-20 text-white">
+      <p class="text-sm" v-if="block.kicker">{{ block.kicker }}</p>
+      <BaseHeading size="h1">{{ block.title }}</BaseHeading>
     </div>
   </section>
 </template>
@@ -23,4 +18,21 @@
   }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="postcss" scoped>
+  section {
+    @apply bg-primary-dark;
+
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background: url(~/static/interiorTitle-bg.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+    }
+  }
+</style>
