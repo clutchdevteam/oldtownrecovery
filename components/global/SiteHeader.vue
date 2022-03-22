@@ -10,11 +10,7 @@
 
     <nav>
       <ul class="desktop hidden lg:flex mr-2">
-        <li
-          v-for="menu in nav"
-          :key="menu.id"
-          class="text-black font-semibold opacity-75 flex justify-center content-center border-t-2 border-transparent hover:opacity-100 hover:border-accent text-sm"
-        >
+        <li v-for="menu in nav" :key="menu.id">
           <BaseMenu :menu="menu" :depth="0" />
         </li>
       </ul>
@@ -129,11 +125,11 @@
 </script>
 
 <style lang="postcss">
-  nav ul li a {
-    @apply p-6;
+  nav ul li div a {
+    @apply p-6 text-black font-semibold border-t-2 border-transparent opacity-75;
   }
 
   .nuxt-link-exact-active {
-    @apply border-accent opacity-100 text-primary-light;
+    @apply border-t-2 border-accent opacity-100 text-primary-light border-opacity-100;
   }
 </style>
