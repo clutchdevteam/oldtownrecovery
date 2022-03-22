@@ -1,19 +1,21 @@
 <template>
-  <header class="container mx-auto flex justify-between">
-    <div class="w-28">
+  <header class="flex items-center justify-between height-limit">
+    <div class="bg-primary-light rounded-br-md p-3">
       <BaseLink href="/" :inert="isMobileMenuOpen">
         <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
       </BaseLink>
     </div>
 
+    <!-- this style may have to go back on the ul class after this comment: space-x-6 -->
+
     <nav>
-      <ul class="desktop hidden md:flex space-x-6">
+      <ul class="desktop hidden lg:flex mr-2">
         <li v-for="menu in nav" :key="menu.id">
           <BaseMenu :menu="menu" :depth="0" />
         </li>
       </ul>
 
-      <div class="mobile md:hidden">
+      <div class="mobile lg:hidden">
         <button
           ref="openButtonRef"
           @click="toggleMobileMenu"
@@ -21,20 +23,9 @@
           :inert="isMobileMenuOpen"
         >
           <span class="sr-only">Open main menu</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <div class="p-4">
+            <BaseIcon class="w-8 h-8 text-primary-light" file="menu-icon" alt="Open Menu" />
+          </div>
 
           <Portal to="mobile-menu">
             <div
@@ -57,20 +48,11 @@
                     type="button"
                   >
                     <span class="sr-only">Close menu</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
+                    <BaseIcon
+                      class="w-6 h-6 text-primary-light"
+                      file="close-icon"
+                      alt="Close Menu"
+                    />
                   </button>
                 </div>
 
@@ -141,3 +123,13 @@
     },
   }
 </script>
+
+<style lang="postcss">
+  nav ul li div a {
+    @apply p-6 text-black font-semibold border-t-2 border-transparent opacity-75;
+  }
+
+  .nuxt-link-exact-active {
+    @apply border-t-2 border-accent opacity-100 text-primary-light border-opacity-100;
+  }
+</style>
