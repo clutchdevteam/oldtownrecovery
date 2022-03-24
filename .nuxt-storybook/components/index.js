@@ -17,6 +17,7 @@ export { default as BaseRadioGroup } from '../../components/base/BaseRadioGroup.
 export { default as BaseSelect } from '../../components/base/BaseSelect.vue'
 export { default as BaseText } from '../../components/base/BaseText.vue'
 export { default as BaseTextarea } from '../../components/base/BaseTextarea.vue'
+export { default as BlocksHighlightCta } from '../../components/blocks/HighlightCta.vue'
 export { default as BlocksInteriorTitle } from '../../components/blocks/InteriorTitle.vue'
 export { default as BlocksTest } from '../../components/blocks/Test.vue'
 export { default as BaseRichText } from '../../components/base/BaseRichText/BaseRichText.vue'

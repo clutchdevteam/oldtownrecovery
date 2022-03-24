@@ -21,10 +21,7 @@ Default.argTypes = {
   color: {
     control: {
       type: 'select',
-      options: [
-        'text-green-500',
-        'text-blue-500',
-        'text-black'
+      options: ['text-green-500', 'text-blue-500', 'text-black'],
     },
   },
 }

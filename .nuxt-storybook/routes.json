@@ -3,14 +3,12 @@
     "name": "contact-us",
     "path": "/contact-us",
     "component": "/Users/drewclements/Desktop/clutch/oldtownrecovery/pages/contact-us.vue",
-    "chunkName": "pages/contact-us",
-    "_name": "_22460b48"
+    "chunkName": "pages/contact-us"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "/Users/drewclements/Desktop/clutch/oldtownrecovery/pages/_.vue",
-    "chunkName": "pages/_",
-    "_name": "_b21d39dc"
+    "chunkName": "pages/_"
   }
 ]
