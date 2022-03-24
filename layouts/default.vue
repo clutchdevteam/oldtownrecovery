@@ -45,8 +45,6 @@
 
   main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-grow: 1;
   }
 </style>

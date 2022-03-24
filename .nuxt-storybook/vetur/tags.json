@@ -58,6 +58,8 @@
   },
   "BlocksHighlightCta": {
     "description": "Auto imported from components/blocks/HighlightCta.vue"
+  "BlocksInteriorTitle": {
+    "description": "Auto imported from components/blocks/InteriorTitle.vue"
   },
   "BlocksTest": {
     "description": "Auto imported from components/blocks/Test.vue"

@@ -39,7 +39,7 @@
           case 'h2-lg':
             classes.push(
               'font-display',
-              'font-medium',
+              'font-semibold',
               'text-4xl',
               'sm:text-5xl',
               'leading-tighter'
@@ -48,7 +48,7 @@
           case 'h2':
             classes.push(
               'font-display',
-              'font-medium',
+              'font-semibold',
               'text-3xl',
               'sm:text-4xl',
               'leading-tighter'
@@ -57,20 +57,26 @@
           case 'h3':
             classes.push(
               'font-display',
-              'font-medium',
+              'font-semibold',
               'text-2xl',
               'sm:text-3xl',
               'leading-tighter'
             )
             break
           case 'h4':
-            classes.push('font-display', 'font-medium', 'text-xl', 'sm:text-2xl', 'leading-tighter')
+            classes.push(
+              'font-display',
+              'font-semibold',
+              'text-xl',
+              'sm:text-2xl',
+              'leading-tighter'
+            )
             break
           case 'h5':
             classes.push('font-semibold', 'text-xl', 'leading-snug')
             break
           case 'h6':
-            classes.push('font-medium', 'text-2xs', 'leading-snug', 'uppercase', 'tracking-wide')
+            classes.push('font-semibold', 'text-2xs', 'leading-snug', 'uppercase', 'tracking-wide')
             break
         }
 
