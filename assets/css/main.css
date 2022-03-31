@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Hind:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Hind:wght@400;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -27,4 +27,13 @@ body {
 
 *:hover {
   @apply transition duration-150 ease-in-out;
+}
+
+.base-wrapper {
+  @apply container mx-auto px-4 lg:px-0;
+}
+
+.desktop-container {
+  @apply mx-auto px-4 lg:px-0;
+  max-width: 960px;
 }
