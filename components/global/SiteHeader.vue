@@ -99,7 +99,7 @@
       },
       logo: {
         type: Object,
-        required: true,
+        default: () => {},
       },
     },
     computed: {
