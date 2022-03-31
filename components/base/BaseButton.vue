@@ -21,6 +21,7 @@
       },
       href: {
         type: String,
+        required: false,
       },
     },
   }

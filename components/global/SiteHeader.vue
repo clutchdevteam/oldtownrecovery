@@ -1,12 +1,12 @@
 <template>
-  <header class="flex items-center justify-between height-limit">
-    <div class="bg-primary-light rounded-br-md p-3">
+  <header
+    :class="`z-[51] w-full flex items-center justify-between ${isHomePage ? 'absolute' : ''}`"
+  >
+    <div class="bg-primary-light rounded-br-md p-3 z-50">
       <BaseLink href="/" :inert="isMobileMenuOpen">
         <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
       </BaseLink>
     </div>
-
-    <!-- this style may have to go back on the ul class after this comment: space-x-6 -->
 
     <nav>
       <ul class="desktop hidden lg:flex mr-2">
@@ -29,7 +29,7 @@
 
           <Portal to="mobile-menu">
             <div
-              :class="`fixed inset-0 bg-black transition duration-150 ${
+              :class="`z-[52] fixed inset-0 bg-black transition duration-150 ${
                 isMobileMenuOpen ? 'bg-opacity-75' : 'bg-opacity-0 pointer-events-none'
               }`"
               :inert="!isMobileMenuOpen"
@@ -104,6 +104,14 @@
     },
     computed: {
       ...mapState('global', ['isMobileMenuOpen', 'pageHasModalOpen']),
+      isHomePage() {
+        return this.$route.fullPath === '/' || this.$route.fullPath === '/home'
+      },
+    },
+    watch: {
+      $route(to, from) {
+        this.closeMenu()
+      },
     },
     methods: {
       async toggleMobileMenu() {
@@ -130,6 +138,6 @@
   }
 
   .nuxt-link-exact-active {
-    @apply border-t-2 border-accent opacity-100 text-primary-light border-opacity-100;
+    @apply border-t-2 opacity-100 text-primary-light lg:border-accent-light lg:border-opacity-100;
   }
 </style>
