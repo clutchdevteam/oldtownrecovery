@@ -32,7 +32,7 @@
     @apply px-5 py-1 font-display rounded transition duration-150 ease-in-out border-2 border-transparent;
 
     &.btn-primary {
-      @apply bg-accent text-white;
+      @apply bg-accent-light text-white;
     }
 
     &.btn-secondary {
@@ -40,7 +40,7 @@
     }
 
     &:hover {
-      @apply scale-105;
+      @apply bg-accent-dark scale-105;
     }
   }
 
