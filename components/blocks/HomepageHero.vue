@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section class="relative h-screen flex justify-center items-center">
+    <section class="relative h-screen flex justify-center items-center overflow-hidden">
       <BaseImage
-        class="absolute z-[-1] object-cover h-full w-full"
+        class="absolute z-[-1] h-auto w-full top-0"
         :src="block.backgroundImage.filename"
         :alt="block.backgroundImage.alt"
       />

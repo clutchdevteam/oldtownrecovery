@@ -1,5 +1,5 @@
 <template>
-  <div class="site-wrapper">
+  <div>
     <SiteHeader :nav="mainNav" :logo="logo" :inert="hasOpenMenu" />
 
     <main :inert="hasOpenMenu">
