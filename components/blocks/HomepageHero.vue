@@ -2,16 +2,13 @@
   <div>
     <section class="relative h-screen flex justify-center items-center overflow-hidden">
       <BaseImage
-        class="absolute z-[-1] h-auto w-full top-0"
+        class="absolute z-[-1] h-full w-full object-cover"
         :src="block.backgroundImage.filename"
         :alt="block.backgroundImage.alt"
       />
 
       <div class="base-wrapper z-10 flex flex-col lg:justify-center lg:items-center">
-        <BaseHeading
-          size="h1"
-          class="text-white w-3/4 text-left md:w-2/5 lg:w-1/3 2xl:w-80 lg:text-center mb-16"
-        >
+        <BaseHeading size="h1" class="text-white text-left lg:w-2/3 2xl:w-1/3 lg:text-center mb-16">
           {{ block.title }}
         </BaseHeading>
 

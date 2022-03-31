@@ -31,8 +31,8 @@
             classes.push(
               'font-display',
               'font-semibold',
-              'text-5xl',
-              'lg:text-6xl',
+              'text-7xl',
+              'lg:text-8xl',
               'leading-tighter'
             )
             break
