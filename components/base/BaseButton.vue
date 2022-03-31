@@ -29,14 +29,24 @@
 
 <style lang="postcss" scoped>
   .btn {
-    @apply px-10 py-2 font-display font-semibold rounded transition duration-150 ease-in-out;
+    @apply px-5 py-1 font-display rounded transition duration-150 ease-in-out border-2 border-transparent;
 
     &.btn-primary {
-      @apply bg-accent-light text-white;
+      @apply bg-accent text-white;
+    }
 
-      &:hover {
-        @apply bg-accent-dark;
-      }
+    &.btn-secondary {
+      @apply bg-primary-dark text-white;
+    }
+
+    &:hover {
+      @apply scale-105;
+    }
+  }
+
+  @screen lg {
+    .btn {
+      @apply text-lg;
     }
   }
 </style>

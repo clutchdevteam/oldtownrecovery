@@ -25,6 +25,7 @@ You can directly use them in pages and other components without the need to impo
 - `<BaseSelect>` | `<base-select>` (components/base/BaseSelect.vue)
 - `<BaseText>` | `<base-text>` (components/base/BaseText.vue)
 - `<BaseTextarea>` | `<base-textarea>` (components/base/BaseTextarea.vue)
+- `<BlocksHighlightCta>` | `<blocks-highlight-cta>` (components/blocks/HighlightCta.vue)
 - `<BlocksInteriorTitle>` | `<blocks-interior-title>` (components/blocks/InteriorTitle.vue)
 - `<BlocksTest>` | `<blocks-test>` (components/blocks/Test.vue)
 - `<BaseRichText>` | `<base-rich-text>` (components/base/BaseRichText/BaseRichText.vue)

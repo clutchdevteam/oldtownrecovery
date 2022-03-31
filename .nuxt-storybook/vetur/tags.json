@@ -56,6 +56,8 @@
   "BaseTextarea": {
     "description": "Auto imported from components/base/BaseTextarea.vue"
   },
+  "BlocksHighlightCta": {
+    "description": "Auto imported from components/blocks/HighlightCta.vue"
   "BlocksInteriorTitle": {
     "description": "Auto imported from components/blocks/InteriorTitle.vue"
   },
