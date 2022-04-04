@@ -29,7 +29,7 @@
 
 <style lang="postcss" scoped>
   .btn {
-    @apply px-5 py-1 font-display rounded transition duration-150 ease-in-out border-2 border-transparent;
+    @apply px-10 py-1 font-display rounded transition duration-150 ease-in-out border-2 border-transparent;
 
     &.btn-primary {
       @apply bg-accent-light text-white;
