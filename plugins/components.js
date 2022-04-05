@@ -6,6 +6,7 @@ import InteriorTitle from '~/components/blocks/InteriorTitle.vue'
 import HomepageHero from '~/components/blocks/HomepageHero.vue'
 import TwoColImageRightCta from '~/components/blocks/TwoColImageRightCta'
 import CareCard from '~/components/blocks/CareCard'
+import TwoColImage from '~/components/blocks/TwoColImage'
 
 Vue.component('page', Page)
 Vue.component('test', Test)
@@ -14,3 +15,4 @@ Vue.component('InteriorTitle', InteriorTitle)
 Vue.component('HomepageHero', HomepageHero)
 Vue.component('TwoColImageRightCta', TwoColImageRightCta)
 Vue.component('CareCard', CareCard)
+Vue.component('TwoColImage', TwoColImage)
