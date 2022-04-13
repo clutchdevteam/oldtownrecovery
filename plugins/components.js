@@ -7,6 +7,7 @@ import HomepageHero from '~/components/blocks/HomepageHero.vue'
 import TwoColImageRightCta from '~/components/blocks/TwoColImageRightCta'
 import CareCard from '~/components/blocks/CareCard'
 import TwoColImage from '~/components/blocks/TwoColImage'
+import ThreeUpCard from '~/components/blocks/ThreeUpCard'
 
 Vue.component('page', Page)
 Vue.component('test', Test)
@@ -16,3 +17,4 @@ Vue.component('HomepageHero', HomepageHero)
 Vue.component('TwoColImageRightCta', TwoColImageRightCta)
 Vue.component('CareCard', CareCard)
 Vue.component('TwoColImage', TwoColImage)
+Vue.component('ThreeUpCard', ThreeUpCard)

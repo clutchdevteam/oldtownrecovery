@@ -40,7 +40,7 @@
     }
 
     &:hover {
-      @apply bg-accent-dark scale-105;
+      @apply bg-accent-dark;
     }
   }
 
