@@ -9,7 +9,7 @@
       </div>
       <!-- This button only renders above lg window width -->
       <div class="-mt-4 hidden lg:flex justify-center">
-        <BaseButton class="!bg-primary-dark font-semibold text-lg !py-0">
+        <BaseButton class="!bg-primary-dark font-semibold text-lg !px-8 !py-0">
           {{ block.button[0].btnText }}
         </BaseButton>
       </div>
