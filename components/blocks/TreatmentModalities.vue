@@ -9,7 +9,7 @@
       </div>
       <!-- This button only renders above lg window width -->
       <div class="-mt-4 hidden lg:flex justify-center">
-        <BaseButton class="!bg-primary-dark font-semibold text-lg !px-8 !py-0">
+        <BaseButton theme="secondary" :href="block.button[0].link.cached_url">
           {{ block.button[0].btnText }}
         </BaseButton>
       </div>
@@ -34,7 +34,7 @@
 
     <!-- This button only renders below lg window width -->
     <div class="flex float-right -mt-12 lg:hidden">
-      <BaseButton class="!bg-primary-dark font-semibold text-lg !py-0">
+      <BaseButton theme="secondary" :href="block.button[0].link.cached_url">
         {{ block.button[0].btnText }}
       </BaseButton>
     </div>
