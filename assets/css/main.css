@@ -16,10 +16,13 @@ html {
 
 body {
   @apply overflow-x-hidden font-body;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *:focus-visible {
-  outline-color: #6fcfc9;
+  outline-color: #23cea0;
   outline-style: auto;
   outline-offset: 3px;
   outline-width: 2px;
