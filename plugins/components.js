@@ -8,6 +8,7 @@ import TwoColImageRightCta from '~/components/blocks/TwoColImageRightCta'
 import CareCard from '~/components/blocks/CareCard'
 import TwoColImage from '~/components/blocks/TwoColImage'
 import ThreeUpCard from '~/components/blocks/ThreeUpCard'
+import ClientTestimonial from '~/components/blocks/ClientTestimonial'
 
 Vue.component('page', Page)
 Vue.component('test', Test)
@@ -18,3 +19,4 @@ Vue.component('TwoColImageRightCta', TwoColImageRightCta)
 Vue.component('CareCard', CareCard)
 Vue.component('TwoColImage', TwoColImage)
 Vue.component('ThreeUpCard', ThreeUpCard)
+Vue.component('ClientTestimonial', ClientTestimonial)
