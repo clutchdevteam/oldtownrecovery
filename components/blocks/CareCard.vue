@@ -10,7 +10,10 @@
       </div>
 
       <div class="px-6">
-        <BaseHeading size="h3" class="font-normal w-2/5 lg:w-11/12 py-4">
+        <BaseHeading
+          size="h3"
+          :class="`font-normal py-4 ${block.isHighLight ? 'w-3/4 lg:w-11/12' : 'w-1/12'}`"
+        >
           {{ block.heading }}
         </BaseHeading>
 
@@ -24,7 +27,7 @@
       <div v-if="!block.isHighLight" class="pb-6">
         <BaseLink
           :href="block.button[0].link.cached_url"
-          class="px-6 font-display text-accent-light text-xl border-none underline underline-offset"
+          class="px-6 font-display !text-accent-light text-xl border-none underline underline-offset"
         >
           {{ block.button[0].btnText }}
         </BaseLink>

@@ -33,14 +33,14 @@
 
     &.btn-primary {
       @apply bg-accent-light text-white;
+
+      &:hover {
+        @apply bg-accent-dark;
+      }
     }
 
     &.btn-secondary {
       @apply bg-primary-dark text-white;
-    }
-
-    &:hover {
-      @apply bg-accent-dark;
     }
   }
 
