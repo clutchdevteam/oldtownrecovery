@@ -9,6 +9,7 @@ import CareCard from '~/components/blocks/CareCard'
 import TwoColImage from '~/components/blocks/TwoColImage'
 import ThreeUpCard from '~/components/blocks/ThreeUpCard'
 import TreatmentModalities from '~/components/blocks/TreatmentModalities'
+import ThreeColText from '~/components/blocks/ThreeColText'
 
 Vue.component('page', Page)
 Vue.component('test', Test)
@@ -20,3 +21,4 @@ Vue.component('CareCard', CareCard)
 Vue.component('TwoColImage', TwoColImage)
 Vue.component('ThreeUpCard', ThreeUpCard)
 Vue.component('TreatmentModalities', TreatmentModalities)
+Vue.component('ThreeColText', ThreeColText)
