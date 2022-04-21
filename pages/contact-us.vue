@@ -16,17 +16,26 @@
           <form class="relative flex flex-col" @submit.prevent="handleSubmit">
             <input class="hidden" type="hidden" name="form-name" value="contact" />
 
-            <BaseInput class="mb-4" v-model="form.name" name="name" required>Name</BaseInput>
+            <BaseInput class="mb-4" v-model="form.name" name="name" required label="Name" />
 
-            <BaseInput class="mb-4" v-model="form.email" name="email" type="email" required>
-              Email
-            </BaseInput>
+            <BaseInput
+              class="mb-4"
+              v-model="form.email"
+              name="email"
+              type="email"
+              required
+              label="Email"
+            />
 
-            <BaseInput class="mb-4" v-model="form.phone" name="phone" type="tel">Phone</BaseInput>
+            <BaseInput class="mb-4" v-model="form.phone" name="phone" type="tel" label="Phone" />
 
-            <BaseTextarea class="mb-4" v-model="form.message" name="message" required>
-              Message
-            </BaseTextarea>
+            <BaseTextarea
+              class="mb-4"
+              v-model="form.message"
+              name="message"
+              required
+              label="Message"
+            />
 
             <p class="hidden">
               <label>Don't fill this out if you're human: <input name="bot-field" /></label>

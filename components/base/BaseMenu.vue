@@ -8,7 +8,7 @@
       class="block"
       v-else
       :id="menu.title.toLowerCase().replace(' ', '-')"
-      :to="menu.slug.cached_url"
+      :to="$formRoute({ url: menu.slug.cached_url })"
     >
       {{ menu.title }}
     </nuxt-link>
@@ -16,16 +16,16 @@
 </template>
 
 <script>
-export default {
-  props: {
-    menu: {
-      type: Object,
-      required: true,
+  export default {
+    props: {
+      menu: {
+        type: Object,
+        required: true,
+      },
+      depth: {
+        type: Number,
+        required: true,
+      },
     },
-    depth: {
-      type: Number,
-      required: true,
-    },
-  },
-};
+  }
 </script>
