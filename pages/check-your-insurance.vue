@@ -2,25 +2,59 @@
   <section class="w-full">
     <InteriorTitle :block="{ title: 'Check Your Insurance' }" />
 
-    <form class="max-w-4xl mx-auto py-20">
+    <form class="relative max-w-4xl mx-auto py-20 base-wrapper" @submit.prevent="handleSubmit">
+      <input class="hidden" type="hidden" name="form-name" value="Check Insurance" />
       <div class="grid lg:grid-cols-2 gap-12 mb-6">
-        <BaseInput v-model="name" label="Name" />
-        <BaseInput v-model="birthday" label="Birthday" />
+        <BaseInput v-model="form.name" label="Name" name="name" required />
+        <BaseInput v-model="form.birthday" label="Birthday" name="birthday" required />
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 mb-6">
-        <BaseInput v-model="insuranceProvider" label="Insurance Provider" />
-        <BaseInput v-model="memberId" label="Member ID" />
+        <BaseInput
+          v-model="form.insuranceProvider"
+          label="Insurance Provider"
+          name="insurance-provider"
+          required
+        />
+        <BaseInput v-model="form.memberId" label="Member ID" name="member-id" required />
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 mb-6">
-        <BaseInput v-model="pointOfContactName" label="Point of Contact (Name)" />
-        <BaseInput v-model="pointOfContactPhone" label="Point of Contact (Phone Number)" />
+        <BaseInput
+          v-model="form.pointOfContactName"
+          label="Point of Contact (Name)"
+          name="point-of-contact-name"
+          required
+        />
+        <BaseInput
+          v-model="form.pointOfContactPhone"
+          label="Point of Contact (Phone Number)"
+          name="point-of-contact-phone"
+          required
+        />
       </div>
 
-      <BaseTextarea class="mb-8" label="Additional Notes" rows="6" />
+      <BaseTextarea
+        class="mb-8"
+        label="Additional Notes"
+        name="additional-notes"
+        :rows="6"
+        v-model="form.notes"
+        required
+      />
+
+      <p class="hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+      </p>
 
       <BaseButton class="float-right" type="submit">Submit</BaseButton>
+
+      <p
+        v-if="responseMessage"
+        :class="`${responseState === 'success' ? 'text-primary-light' : 'text-red-700'} text-sm `"
+      >
+        {{ this.responseMessage }}
+      </p>
     </form>
   </section>
 </template>
@@ -116,7 +150,7 @@
           method: 'post',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
-            'form-name': 'contact',
+            'form-name': 'Check Insurance',
             ...this.form,
           }),
         })
@@ -126,9 +160,12 @@
               this.responseState = 'success'
 
               this.form.name = ''
-              this.form.email = ''
-              this.form.phone = ''
-              this.form.message = ''
+              this.form.birthday = ''
+              this.form.insuranceProvider = ''
+              this.form.memberId = ''
+              this.form.pointOfContactName = ''
+              this.form.pointOfContactPhone = ''
+              this.form.notes = ''
             } else {
               this.responseMessage = 'Oops! Looks like something went wrong. Please try again!'
               this.responseState = 'error'
