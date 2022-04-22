@@ -2,7 +2,7 @@
   <section class="relative flex justify-center py-12 overflow-hidden">
     <div class="flex flex-col items-center z-20 text-white">
       <p class="text-sm" v-if="block.kicker">{{ block.kicker }}</p>
-      <BaseHeading size="h1">{{ block.title }}</BaseHeading>
+      <BaseHeading size="h2" tag="h1">{{ block.title }}</BaseHeading>
     </div>
   </section>
 </template>
