@@ -8,6 +8,7 @@ import TwoColImageRightCta from '~/components/blocks/TwoColImageRightCta'
 import CareCard from '~/components/blocks/CareCard'
 import TwoColImage from '~/components/blocks/TwoColImage'
 import ThreeUpCard from '~/components/blocks/ThreeUpCard'
+import ClientTestimonial from '~/components/blocks/ClientTestimonial'
 import TreatmentModalities from '~/components/blocks/TreatmentModalities'
 import ThreeColText from '~/components/blocks/ThreeColText'
 
@@ -20,5 +21,6 @@ Vue.component('TwoColImageRightCta', TwoColImageRightCta)
 Vue.component('CareCard', CareCard)
 Vue.component('TwoColImage', TwoColImage)
 Vue.component('ThreeUpCard', ThreeUpCard)
+Vue.component('ClientTestimonial', ClientTestimonial)
 Vue.component('TreatmentModalities', TreatmentModalities)
 Vue.component('ThreeColText', ThreeColText)

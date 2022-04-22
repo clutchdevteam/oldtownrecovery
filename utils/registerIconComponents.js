@@ -4,4 +4,5 @@ export default {
   MenuIcon: () => import('~/assets/icons/menu-icon.svg?inline'),
   CloseIcon: () => import('~/assets/icons/close-icon.svg?inline'),
   CheckIcon: () => import('~/assets/icons/check-icon.svg?inLine'),
+  QuoteIcon: () => import('~/assets/icons/quote-icon.svg?inLine'),
 }
