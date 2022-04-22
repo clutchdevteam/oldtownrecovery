@@ -1,17 +1,20 @@
 <template>
-  <footer>
-    <div class="container mx-auto flex justify-between items-center">
+  <footer class="bg-primary-dark">
+    <div class="container mx-auto flex flex-col justify-between items-center py-20">
       <div>
         <BaseImage
+          class="w-56 h-auto"
           :src="footerContent.logo.filename"
           :alt="footerContent.logo.alt"
         />
       </div>
 
-      <nav>
-        <ul class="flex space-x-4">
+      <nav class="pt-8">
+        <ul class="flex space-x-10">
           <li v-for="menu in footerContent.footerNav" :key="menu.id">
-            <BaseLink :href="menu.slug.cached_url">{{ menu.title }}</BaseLink>
+            <BaseLink :href="menu.slug.cached_url" class="text-white opacity-75 border-none">{{
+              menu.title
+            }}</BaseLink>
           </li>
         </ul>
       </nav>
@@ -20,12 +23,12 @@
 </template>
 
 <script>
-export default {
-  props: {
-    footerContent: {
-      type: Object,
-      required: true,
+  export default {
+    props: {
+      footerContent: {
+        type: Object,
+        required: true,
+      },
     },
-  },
-};
+  }
 </script>
