@@ -10,8 +10,10 @@
 
     <nav>
       <ul class="desktop hidden lg:flex mr-2">
-        <li v-for="menu in nav" :key="menu.id">
-          <BaseMenu :menu="menu" :depth="0" />
+        <li v-for="menu in nav" :key="menu.id" class="px-6">
+          <nuxt-link class="block" :to="menu.slug.cached_url">
+            {{ menu.title }}
+          </nuxt-link>
         </li>
       </ul>
 

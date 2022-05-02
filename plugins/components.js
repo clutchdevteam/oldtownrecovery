@@ -11,6 +11,7 @@ import ThreeUpCard from '~/components/blocks/ThreeUpCard'
 import ClientTestimonial from '~/components/blocks/ClientTestimonial'
 import TreatmentModalities from '~/components/blocks/TreatmentModalities'
 import ThreeColText from '~/components/blocks/ThreeColText'
+import ImageHighlight from '~/components/blocks/ImageHighlight'
 
 Vue.component('page', Page)
 Vue.component('test', Test)
@@ -24,3 +25,4 @@ Vue.component('ThreeUpCard', ThreeUpCard)
 Vue.component('ClientTestimonial', ClientTestimonial)
 Vue.component('TreatmentModalities', TreatmentModalities)
 Vue.component('ThreeColText', ThreeColText)
+Vue.component('ImageHighlight', ImageHighlight)
