@@ -11,9 +11,7 @@
     <nav>
       <ul class="desktop hidden lg:flex mr-2">
         <li v-for="menu in nav" :key="menu.id" class="px-6">
-          <nuxt-link class="block" :to="menu.slug.cached_url">
-            {{ menu.title }}
-          </nuxt-link>
+          <BaseMenu :menu="menu" :depth="0" />
         </li>
       </ul>
 
@@ -141,7 +139,7 @@
   }
 
   .desktop li div div ul {
-    @apply absolute bg-white drop-shadow-md;
+    @apply absolute bg-white drop-shadow-md z-50;
   }
 
   .nuxt-link-exact-active {
