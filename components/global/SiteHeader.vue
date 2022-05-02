@@ -133,8 +133,13 @@
 </script>
 
 <style lang="postcss">
-  nav ul li div a {
+  nav ul li div a,
+  nav ul li div div button {
     @apply p-6 text-black font-semibold border-t-2 border-transparent opacity-75;
+  }
+
+  .desktop li div div ul {
+    @apply absolute bg-white drop-shadow-md;
   }
 
   .nuxt-link-exact-active {
