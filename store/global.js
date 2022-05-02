@@ -26,5 +26,6 @@ export const mutations = {
 
     state.footer.footerNav = globals?.footer[0]?.footerNav
     state.footer.logo = globals?.footer[0]?.logo
+    state.footer.preFooter = globals?.footer[0]?.preFooter[0]
   },
 }
