@@ -2,7 +2,10 @@
   <section class="w-full">
     <InteriorTitle :block="{ title: 'Contact Us' }" />
 
-    <form class="relative max-w-xl mx-auto px-6 xl:px-0 py-20" @submit.prevent="handleSubmit">
+    <form
+      class="relative max-w-xl mx-auto px-6 xl:px-0 py-20 my-20 lg:my-28"
+      @submit.prevent="handleSubmit"
+    >
       <input class="hidden" type="hidden" name="form-name" value="Contact" />
 
       <BaseInput v-model="form.name" label="Name" name="name" required />

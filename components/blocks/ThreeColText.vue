@@ -1,5 +1,7 @@
 <template>
-  <section class="base-wrapper desktop-container grid grid-cols-1 gap-8 lg:grid-cols-3 pt-14">
+  <section
+    class="base-wrapper desktop-container grid grid-cols-1 gap-8 lg:grid-cols-3 my-20 lg-my-28"
+  >
     <BaseHeading size="h3" tag="h2" class="text-primary-dark font-display">
       {{ block.heading }}
     </BaseHeading>

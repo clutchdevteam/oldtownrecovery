@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center base-wrapper desktop-container pt-14">
+  <section class="flex flex-col items-center base-wrapper desktop-container my-20 lg:my-28">
     <BaseHeading size="h2" class="text-primary-dark mb-4"> {{ block.heading }} </BaseHeading>
     <div class="flex flex-col lg:flex-row">
       <CareCard

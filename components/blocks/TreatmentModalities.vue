@@ -1,5 +1,5 @@
 <template>
-  <section class="desktop-container lg:flex justify-center">
+  <section class="desktop-container lg:flex justify-center my-20 lg:my-28">
     <div>
       <div class="bg-primary-light rounded-xl p-5 lg:max-w-min">
         <BaseHeading size="h2" class="text-white font-display font-normal !text-4xl w-1/12">

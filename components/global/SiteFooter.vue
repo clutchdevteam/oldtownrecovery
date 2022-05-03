@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col mt-16">
+  <div class="flex flex-col">
     <div class="bg-primary-light">
       <div
         class="desktop-container flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 lg:py-0"
