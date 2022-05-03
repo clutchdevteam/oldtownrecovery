@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-screen-sm mx-auto px-4 my-20 lg:my-28">
+  <section class="max-w-screen-sm mx-auto px-4 pt-10 my-20 lg:my-28">
     <div class="p-4 border-2 border-secondary rounded-xl">
       <div class="px-2 lg:px-8 pt-4 flex flex-col items-center">
         <div class="bg-accent-light rounded-full p-5 drop-shadow-xl -mt-20">
