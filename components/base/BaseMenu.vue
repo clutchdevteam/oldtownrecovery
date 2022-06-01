@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-if="menu.submenus">
-      <BaseMenuItem :menu="menu" :depth="depth + 1" />
+      <BaseMenuItem :menu="menu" :depth="depth + 1" :data-depth="depth" />
     </template>
 
     <nuxt-link

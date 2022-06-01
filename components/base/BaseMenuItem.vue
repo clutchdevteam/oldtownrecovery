@@ -1,5 +1,5 @@
 <template>
-  <div :id="`${menuId}-wrapper`" @keydown.stop="handleKeyPress">
+  <div :id="`${menuId}-wrapper`" @keydown.stop="handleKeyPress" :data-depth="depth">
     <button
       @click.prevent="toggleMenu(menu)"
       :id="menuId"
@@ -9,9 +9,14 @@
       :aria-controls="submenuId"
     >
       {{ menu.title }}
+      <BaseIcon
+        file="chevron-icon"
+        class="h-4 w-4 text-accent-light inline -mt-1 ml-2 transition duration-150 ease-in-out"
+        :class="isOpen ? '-rotate-180' : ''"
+      />
     </button>
 
-    <ul v-show="isOpen" @keydown.esc.stop="closeMenu" :id="submenuId">
+    <ul v-if="isOpen" @keydown.esc.stop="closeMenu" :id="submenuId">
       <BaseMenu
         v-for="(menu, index) in menu.submenus"
         :key="index"
