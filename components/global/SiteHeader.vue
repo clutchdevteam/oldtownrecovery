@@ -135,7 +135,7 @@
 <style lang="postcss">
   .desktop > li div a,
   .desktop > li div div button {
-    @apply p-6 text-black font-semibold border-t-2 border-transparent opacity-75;
+    @apply px-5 py-6 text-black font-semibold border-t-2 border-transparent opacity-75;
   }
 
   .desktop li div div ul {
@@ -150,7 +150,8 @@
     }
   }
 
-  .desktop ul .nuxt-link-exact-active {
+  .desktop .nuxt-link-exact-active,
+  .desktop .nuxt-link-active {
     @apply border-t-2 opacity-100 text-primary-light lg:border-accent-light lg:border-opacity-100;
   }
 </style>
