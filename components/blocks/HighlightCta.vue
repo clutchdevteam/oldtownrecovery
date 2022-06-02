@@ -12,7 +12,7 @@
         class="absolute bottom-0 -mb-4"
         :href="block.button[0].link.cached_url"
       >
-        {{ block.button[0].text }}
+        {{ block.button[0].btnText }}
       </BaseButton>
     </div>
   </section>
