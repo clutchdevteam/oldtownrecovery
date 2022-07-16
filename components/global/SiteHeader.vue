@@ -4,7 +4,7 @@
   >
     <div class="bg-primary-light rounded-br-md p-3 z-50">
       <BaseLink href="/" :inert="isMobileMenuOpen">
-        <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
+        <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" class="img-height" />
       </BaseLink>
     </div>
 
@@ -133,6 +133,10 @@
 </script>
 
 <style lang="postcss">
+  .img-height {
+    height: 50px;
+  }
+
   nav ul li div a,
   nav ul li div div button {
     @apply p-6 text-black font-semibold border-t-2 border-transparent opacity-75;
