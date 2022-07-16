@@ -4,7 +4,7 @@
   >
     <div class="bg-primary-light rounded-br-md p-3 z-50">
       <BaseLink href="/" :inert="isMobileMenuOpen">
-        <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
+        <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" class="img-height" />
       </BaseLink>
     </div>
 
@@ -133,10 +133,10 @@
 </script>
 
 <style lang="postcss">
-  .desktop > li div a,
-  .desktop > li div div button {
-    @apply px-5 py-6 text-black font-semibold border-t-2 border-transparent opacity-75;
+  .img-height {
+    height: 50px;
   }
+
 
   .desktop li div div ul {
     @apply absolute bg-white drop-shadow-md z-50;
