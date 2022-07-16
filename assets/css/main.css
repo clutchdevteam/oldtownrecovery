@@ -4,10 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.site-wrapper {
-  @apply container px-4;
-}
-
 @screen lg {
   .site-wrapper {
     @apply px-0;
@@ -30,10 +26,10 @@ body {
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 500ms;
 }
 
-.page-enter,
+.page-enter-from,
 .page-leave-to {
   opacity: 0;
 }

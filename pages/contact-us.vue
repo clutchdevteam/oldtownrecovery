@@ -2,30 +2,31 @@
   <section class="w-full">
     <InteriorTitle :block="{ title: 'Contact Us' }" />
 
-    <form
-      class="relative max-w-xl mx-auto px-6 xl:px-0 py-20 my-20 lg:my-28"
-      @submit.prevent="handleSubmit"
-    >
+    <form class="relative max-w-xl mx-auto px-6 xl:px-0 py-20 my-20" @submit.prevent="handleSubmit">
       <input class="hidden" type="hidden" name="form-name" value="Contact" />
 
-      <BaseInput v-model="form.name" label="Name" name="name" required />
-      <BaseInput v-model="form.email" label="Email" name="email" type="email" required />
-      <BaseInput v-model="form.phone" label="Phone" name="phone" type="tel" />
+      <div class="flex flex-col space-y-4">
+        <BaseInput v-model="form.name" label="Name" name="name" required />
+        <BaseInput v-model="form.email" label="Email" name="email" type="email" required />
+        <BaseInput v-model="form.phone" label="Phone" name="phone" type="tel" />
 
-      <BaseTextarea
-        class="mb-8"
-        label="Message"
-        name="message"
-        :rows="6"
-        v-model="form.message"
-        required
-      />
+        <BaseTextarea
+          class="mb-8"
+          label="Message"
+          name="message"
+          :rows="6"
+          v-model="form.message"
+          required
+        />
+
+        <div>
+          <BaseButton class="float-right" type="submit">Send a Message</BaseButton>
+        </div>
+      </div>
 
       <p class="hidden">
         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
       </p>
-
-      <BaseButton class="float-right" type="submit">Send a Message</BaseButton>
 
       <p
         v-if="responseMessage"

@@ -137,16 +137,21 @@
     height: 50px;
   }
 
-  nav ul li div a,
-  nav ul li div div button {
-    @apply p-6 text-black font-semibold border-t-2 border-transparent opacity-75;
-  }
 
   .desktop li div div ul {
     @apply absolute bg-white drop-shadow-md z-50;
   }
 
-  .nuxt-link-exact-active {
+  div[id*='care-wrapper'] ul[id*='care-submenu'] {
+    @apply pl-4 border-t border-gray-100 w-full;
+
+    & div a {
+      @apply px-3 py-2;
+    }
+  }
+
+  .desktop .nuxt-link-exact-active,
+  .desktop .nuxt-link-active {
     @apply border-t-2 opacity-100 text-primary-light lg:border-accent-light lg:border-opacity-100;
   }
 </style>
