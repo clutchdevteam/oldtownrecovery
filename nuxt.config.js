@@ -47,7 +47,7 @@ export default {
         ? process.env.STORYBLOK_PREVIEW_API_KEY
         : process.env.STORYBLOK_API_KEY
 
-      const version = isPreview ? 'draft' : 'published'
+      const version = process.env.STORYBLOK_VERSION
       let cacheVersion = 0
       // ignore these files and folders
       const ignoreFiles = ['home', 'global', 'sitefooter']

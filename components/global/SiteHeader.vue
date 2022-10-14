@@ -4,7 +4,12 @@
   >
     <div class="bg-primary-light rounded-br-md p-3 z-50">
       <BaseLink href="/" :inert="isMobileMenuOpen">
-        <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" class="img-height" />
+        <BaseImage
+          v-if="logo"
+          :src="logo.filename"
+          :alt="logo.alt"
+          class="img-height filter invert"
+        />
       </BaseLink>
     </div>
 
@@ -71,7 +76,7 @@
 
                   <div class="px-3 py-6">
                     <BaseLink href="/">
-                      <BaseImage v-if="logo" :src="logo.filename" :alt="logo.alt" />
+                      <img v-if="logo" class="w-1/2" :src="logo.filename" :alt="logo.alt" />
                     </BaseLink>
                   </div>
                 </div>
@@ -137,21 +142,30 @@
     height: 50px;
   }
 
-
   .desktop li div div ul {
     @apply absolute bg-white drop-shadow-md z-50;
   }
 
-  div[id*='care-wrapper'] ul[id*='care-submenu'] {
-    @apply pl-4 border-t border-gray-100 w-full;
+  div[id*='-wrapper'] ul[id*='-submenu'] {
+    @apply border-t border-gray-100;
 
-    & div a {
-      @apply px-3 py-2;
+    & div a,
+    & div button {
+      @apply px-4 py-2;
     }
   }
 
-  .desktop .nuxt-link-exact-active,
-  .desktop .nuxt-link-active {
-    @apply border-t-2 opacity-100 text-primary-light lg:border-accent-light lg:border-opacity-100;
+  .desktop li div a,
+  .desktop li div button {
+    @apply py-4 px-2 border-b-2 border-transparent;
   }
+
+  .desktop li div .nuxt-link-exact-active:not(ul[id*='-submenu']) {
+    @apply border-accent-light;
+  }
+
+  /* .desktop .nuxt-link-exact-active,
+  .desktop .nuxt-link-active {
+    @apply text-primary-light;
+  } */
 </style>

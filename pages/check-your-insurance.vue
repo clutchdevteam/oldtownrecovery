@@ -2,7 +2,7 @@
   <section class="w-full">
     <InteriorTitle :block="{ title: 'Check Your Insurance' }" />
 
-    <form class="relative max-w-4xl mx-auto py-20 base-wrapper" @submit.prevent="handleSubmit">
+    <form class="relative max-w-4xl mx-auto py-20 px-4 lg:px-0" @submit.prevent="handleSubmit">
       <input class="hidden" type="hidden" name="form-name" value="Check Insurance" />
       <div class="grid lg:grid-cols-2 gap-12 mb-6">
         <BaseInput v-model="form.name" label="Name" name="name" required />
