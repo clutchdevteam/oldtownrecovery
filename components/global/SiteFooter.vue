@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col" v-if="footerContent">
     <div class="bg-primary-light">
       <div
         class="desktop-container flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 lg:py-0"
