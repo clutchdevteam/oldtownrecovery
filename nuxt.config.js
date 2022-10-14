@@ -4,11 +4,12 @@ const isPreview = process.env.NODE_ENV === 'development'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  dev: process.env.NODE_ENV !== 'production',
+  dev: isPreview,
 
   env: {
     STORYBLOK_PREVIEW_API_KEY: process.env.STORYBLOK_PREVIEW_API_KEY,
     STORYBLOK_API_KEY: process.env.STORYBLOK_API_KEY,
+    STORYBLOK_VERSION: process.env.STORYBLOK_VERSION,
     NODE_ENV: process.env.NODE_ENV,
   },
 
@@ -48,6 +49,7 @@ export default {
         : process.env.STORYBLOK_API_KEY
 
       const version = process.env.STORYBLOK_VERSION
+      console.log('version', version)
       let cacheVersion = 0
       // ignore these files and folders
       const ignoreFiles = ['home', 'global', 'sitefooter']

@@ -15,9 +15,7 @@
       ...mapState('global', ['loaded']),
       // set version based on environment
       version() {
-        return this.$nuxt.context.query._storyblok || this.$nuxt.context.isDev
-          ? 'draft'
-          : 'published'
+        return process.env.STORYBLOK_VERSION
       },
     },
     mounted() {
@@ -41,7 +39,7 @@
     async fetch() {
       if (!this.loaded) {
         const globalRes = await this.$storyapi.get('cdn/stories/global', {
-          version: 'draft',
+          version: this.version,
         })
 
         // set global content in vuex
@@ -56,7 +54,7 @@
       let res
       try {
         res = await this.$storyapi.get(`cdn/stories/${fullSlug}`, {
-          version: 'draft',
+          version: this.version,
         })
         this.story = res.data.story
       } catch (e) {
@@ -74,7 +72,7 @@
       }
     },
     methods: {
-      getStory(storyId, version = 'draft') {
+      getStory(storyId, version = this.version) {
         return this.$storyapi
           .get(`cdn/stories/${storyId}`, {
             version: version,
